@@ -1,0 +1,28 @@
+{
+  "name": "@apitraffic/data-redaction",
+  "version": "0.0.1",
+  "description": "Data redaction library used for both client and server side data redactions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test jest",
+    "pub-patch": "npm version patch --force && git push origin master &&  npm publish",
+    "pub-minor": "npm version minor --force && git push origin master &&  npm publish",
+    "pub-major": "npm version major --force && git push origin master &&  npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apitraffic/apitraffic-node-data-redaction.git"
+  },
+  "author": "ApiTraffic.io <sdk@apitraffic.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apitraffic/apitraffic-node-data-redaction/issues"
+  },
+  "homepage": "https://github.com/apitraffic/apitraffic-node-data-redaction#readme",
+  "dependencies": {
+    "@hackylabs/deep-redact": "^2.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
