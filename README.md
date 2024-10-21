@@ -1,3 +1,3 @@
-# apitraffic-node-utilities
+# apitraffic-node-data-redaction
 
-Set of utilities that are included in all node sdks.
+Set of data redaction utilities that are included in all node sdks.
