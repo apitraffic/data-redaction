@@ -1,13 +1,13 @@
 {
   "name": "@apitraffic/data-redaction",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Data redaction library used for both client and server side data redactions.",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test jest",
-    "pub-patch": "npm version patch --force && git push origin master &&  npm publish",
-    "pub-minor": "npm version minor --force && git push origin master &&  npm publish",
-    "pub-major": "npm version major --force && git push origin master &&  npm publish"
+    "pub-patch": "npm version patch --force && git push origin main &&  npm publish",
+    "pub-minor": "npm version minor --force && git push origin main &&  npm publish",
+    "pub-major": "npm version major --force && git push origin main &&  npm publish"
   },
   "repository": {
     "type": "git",
