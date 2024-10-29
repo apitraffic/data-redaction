@@ -1,6 +1,6 @@
 {
   "name": "@apitraffic/data-redaction",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Data redaction library used for both client and server side data redactions.",
   "main": "index.js",
   "scripts": {
