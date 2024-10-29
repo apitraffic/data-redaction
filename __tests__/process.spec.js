@@ -24,6 +24,13 @@ describe("When processing multiple rules", () => {
                 "scopes": [
                     "*"
                 ],
+                "level": "full",
+                "type": "email"
+            },
+            {
+                "scopes": [
+                    "*"
+                ],
                 "level": "partial",
                 "type": "jwt"
             }
@@ -39,6 +46,7 @@ describe("When processing multiple rules", () => {
             expectedMatch.request.headers.phone = "************"
             expectedMatch.request.headers.ssn = "***REDACTED***"
             expectedMatch.request.headers.jwt = "eyJ...w5c";
+            expectedMatch.response.body = "{\"sid\":\"usr_2P0CJwkRhFlUBPG183GgJ2Xq78o\",\"phone\":\"************\",\"birthday\":\"1980-02-28\",\"firstName\":\"Pete\",\"lastName\":\"Tester\",\"email\":\"***REDACTED***\",\"timezone\":\"America/Detroit\",\"defaultAccountSid\":\"acc_2P0CJy3C0QyK71VwmqdsPZiMCc1\",\"createdAt\":\"2023-04-27T08:35:43.705Z\",\"accounts\":[{\"sid\":\"acc_2P0CJy3C0QyK71VwmqdsPZiMCc1\",\"name\":\"Pete Tester\",\"isPrimary\":true,\"createdAt\":\"2023-04-27T08:35:44.018Z\"}],\"chat\":{\"userHash\":\"2950e5795a1c8e7a7b74be71edce2f8cf384c6d3f7050f6db18e70dca4047a66\"}}";
 
         const result = redact.process(rules, httpData, {replaceWith: "***REDACTED***"})
         

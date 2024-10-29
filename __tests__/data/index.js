@@ -35,7 +35,7 @@ module.exports.default.get = function(){
                 "accept-ranges": "bytes",
                 "response-token": "tok_2nk7WwnTWA9vEMTrALo8RhRHZ4z2nk7WszyOUfCgphNAbb4dyKUuls",
             },
-            "body": "{\"sid\":\"usr_2P0CJwkRhFlUBPG183GgJ2Xq78o\",\"phone\":\"555-555-1212\",\"birthday\":\"1980-02-28\",\"firstName\":\"Jason\",\"lastName\":\"Fill\",\"email\":\"jason@unocal.io\",\"timezone\":\"America/Detroit\",\"defaultAccountSid\":\"acc_2P0CJy3C0QyK71VwmqdsPZiMCc1\",\"createdAt\":\"2023-04-27T08:35:43.705Z\",\"accounts\":[{\"sid\":\"acc_2P0CJy3C0QyK71VwmqdsPZiMCc1\",\"name\":\"Jason Fill\",\"isPrimary\":true,\"createdAt\":\"2023-04-27T08:35:44.018Z\"}],\"chat\":{\"userHash\":\"2950e5795a1c8e7a7b74be71edce2f8cf384c6d3f7050f6db18e70dca4047a66\"}}"
+            "body": "{\"sid\":\"usr_2P0CJwkRhFlUBPG183GgJ2Xq78o\",\"phone\":\"555-555-1212\",\"birthday\":\"1980-02-28\",\"firstName\":\"Pete\",\"lastName\":\"Tester\",\"email\":\"pete@email.io\",\"timezone\":\"America/Detroit\",\"defaultAccountSid\":\"acc_2P0CJy3C0QyK71VwmqdsPZiMCc1\",\"createdAt\":\"2023-04-27T08:35:43.705Z\",\"accounts\":[{\"sid\":\"acc_2P0CJy3C0QyK71VwmqdsPZiMCc1\",\"name\":\"Pete Tester\",\"isPrimary\":true,\"createdAt\":\"2023-04-27T08:35:44.018Z\"}],\"chat\":{\"userHash\":\"2950e5795a1c8e7a7b74be71edce2f8cf384c6d3f7050f6db18e70dca4047a66\"}}"
         }
    }
 

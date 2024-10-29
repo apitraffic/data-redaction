@@ -7,6 +7,7 @@ module.exports = {
     // This configuration factors to the glob patterns Jest uses to detect test files
  	testMatch: [
    		"**/?(*.)+(spec|test).js?(x)"
+		//"**/builtin(*.)+(spec|test).js?(x)"
  	],
 	// This configuration indicates the Jest to an array of regexp pattern strings that are matched towards all test paths, matched tests are skipped
  	testPathIgnorePatterns: [

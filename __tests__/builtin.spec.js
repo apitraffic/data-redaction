@@ -15,11 +15,12 @@ describe("Redaction Process", () => {
             }
 
             // add the property to test...
-            httpData.request.headers.phone = "205-396-4533";
+            httpData.request.headers.phone = "333-555-1010";
 
             // clone the object then insert what we expect to come back..
             const expectedMatch = data.clone(httpData);
                 expectedMatch.request.headers.phone = "************"
+                expectedMatch.response.body = "{\"sid\":\"usr_2P0CJwkRhFlUBPG183GgJ2Xq78o\",\"phone\":\"************\",\"birthday\":\"1980-02-28\",\"firstName\":\"Pete\",\"lastName\":\"Tester\",\"email\":\"pete@email.io\",\"timezone\":\"America/Detroit\",\"defaultAccountSid\":\"acc_2P0CJy3C0QyK71VwmqdsPZiMCc1\",\"createdAt\":\"2023-04-27T08:35:43.705Z\",\"accounts\":[{\"sid\":\"acc_2P0CJy3C0QyK71VwmqdsPZiMCc1\",\"name\":\"Pete Tester\",\"isPrimary\":true,\"createdAt\":\"2023-04-27T08:35:44.018Z\"}],\"chat\":{\"userHash\":\"2950e5795a1c8e7a7b74be71edce2f8cf384c6d3f7050f6db18e70dca4047a66\"}}";
 
             const result = redact.processRule(rule,httpData)
             
@@ -43,6 +44,7 @@ describe("Redaction Process", () => {
             // clone the object then insert what we expect to come back..
             const expectedMatch = data.clone(httpData);
                 expectedMatch.request.headers.birthday = "**********"
+                expectedMatch.response.body = "{\"sid\":\"usr_2P0CJwkRhFlUBPG183GgJ2Xq78o\",\"phone\":\"555-555-1212\",\"birthday\":\"**********\",\"firstName\":\"Pete\",\"lastName\":\"Tester\",\"email\":\"pete@email.io\",\"timezone\":\"America/Detroit\",\"defaultAccountSid\":\"acc_2P0CJy3C0QyK71VwmqdsPZiMCc1\",\"createdAt\":\"2023-04-27T08:35:43.705Z\",\"accounts\":[{\"sid\":\"acc_2P0CJy3C0QyK71VwmqdsPZiMCc1\",\"name\":\"Pete Tester\",\"isPrimary\":true,\"createdAt\":\"2023-04-27T08:35:44.018Z\"}],\"chat\":{\"userHash\":\"2950e5795a1c8e7a7b74be71edce2f8cf384c6d3f7050f6db18e70dca4047a66\"}}";
 
             const result = redact.processRule(rule, httpData)
             
@@ -112,6 +114,7 @@ describe("Redaction Process", () => {
             // clone the object then insert what we expect to come back..
             const expectedMatch = data.clone(httpData);
                 expectedMatch.request.headers.email = "***************"
+                expectedMatch.response.body = "{\"sid\":\"usr_2P0CJwkRhFlUBPG183GgJ2Xq78o\",\"phone\":\"555-555-1212\",\"birthday\":\"1980-02-28\",\"firstName\":\"Pete\",\"lastName\":\"Tester\",\"email\":\"*************\",\"timezone\":\"America/Detroit\",\"defaultAccountSid\":\"acc_2P0CJy3C0QyK71VwmqdsPZiMCc1\",\"createdAt\":\"2023-04-27T08:35:43.705Z\",\"accounts\":[{\"sid\":\"acc_2P0CJy3C0QyK71VwmqdsPZiMCc1\",\"name\":\"Pete Tester\",\"isPrimary\":true,\"createdAt\":\"2023-04-27T08:35:44.018Z\"}],\"chat\":{\"userHash\":\"2950e5795a1c8e7a7b74be71edce2f8cf384c6d3f7050f6db18e70dca4047a66\"}}";
 
             const result = redact.processRule(rule, httpData)
             
